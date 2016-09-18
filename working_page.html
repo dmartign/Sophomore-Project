@@ -1,0 +1,596 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title> Trader Joe's Nutrition Facts - Calculator </title>
+    <!-- <script type="text/javascript" src="js/formcalculations.js"></script>    -->
+    <link href=" " rel="stylesheet" type="text/css" />     <!--Is link href important here? It came with the template. -->
+</head>
+<body onload='hideTotal()'>
+
+<body bgcolor="#ffffcc" background="lime_green_vertical_stripes.jpg"> <!-- background color of web page -->
+
+<table width="100%" bgcolor="000000" cellspacing="30"> <!-- Distinct Header -->
+<tr> <td> <font face="Georgia" size="+1" color="ffffff" align="right"> <b> CSE/CIT 280 SOPHOMORE PROJECT </b> </font> </td> </tr>
+</table>
+
+<br /> <!-- < br /> inserts a line break, used to separate both tables from the upper margin of the web page -->
+
+<h1 align="center"> <font face="Georgia Light" size="6" color="#000000"> TRADER JOE'S PRODUCTS NUTRITION FACTS - CALCULATIONS/WORKING PAGE </font> </h1>
+
+
+<table  width="40%" align="center"> <!-- 2 hyperlinks, landing page (login page), registration page -->
+<tr align="center">
+<td width="25%"> <a href="landing_page.html"> <font color="#184a18" face="candara" size="4.5"> <strong> Home Page </strong> </font> </a> </td>
+<td width="1%"> | </td>
+<td width="25%"> <a href="working_page.html"> <font color="#184a18" face="candara" size="4.5"> <strong> Calculations - Working page </strong> </font> </a> </td>
+<td width="1%"> | </td>
+<td width="25%"> <a href="sources.html"> <font color="#184a18" face="candara" size="4.5"> <strong> Sources & Citations </strong> </font> </a> </td>
+</tr>
+</table>
+<br/>
+
+
+<!-- Outer table code starts here -->
+
+
+
+<table width="100%" bgcolor="ceefbd" align="center">  
+<tr>
+<br/>
+<td>  <!-- used <th> previously, but <th> is not a very good one to use when text is going to be added to the master's table, because it will format it centered and bold right away -->
+</br>
+<h2 style="color:#000000;margin-bottom:0;text-align:center"> STEP 1: </h2>
+<p> <font color="#000000" face="candara" size="4.5"> Check the following calculator to learn about the daily intake of calories based on your metabolism </font> </p>
+<p> <font face="candara"> <a href="http://nutrition.bizcalcs.com/Calculator.asp?Calc=Daily-Metabolism"> <img src="http://www.bizcalcs.com/Images/Logo150.jpg" border="0" alt="Free Online Calculators and Assessments at BizCalcs.com" />&nbsp;<b>Calories per Day Calculator</b> </a> </font> </p> 
+<br/>
+<p> <font face="candara"> <a href="http://nutrition.bizcalcs.com/Calculator.asp?Calc=Calorie-Breakdown"><img src="http://www.bizcalcs.com/Images/Logo150.jpg" border="0" alt="Free Online Calculators and Assessments at BizCalcs.com" />&nbsp;<b>Recommended Calorie Breakdown Calculator</b> </a> </font> </p>
+<br/>
+<br/>
+</td>
+</tr>
+</table>
+
+
+<br/>
+
+<hr / size="5"> <!-- HORIZONTAL RULE AS SEPARATION -->
+
+
+<!-- Outer table code starts here -->
+<table width="50%" bgcolor="efefad" align="left">  
+<tr>
+<br/>
+<td>  <!-- used <th> previously, but <th> is not a very good one to use when text is going to be added to the master's table, because it will format it centered and bold right away -->
+<br/>
+<h2 style="color:#000000;margin-bottom:0;text-align:center"> STEP 2: </h2>
+
+<br/>
+
+<!-- Image of Trader Joe's added next to the drop-down list -->
+<table align="right">
+<tr>
+<td> <img src="Trader_Joes_Logo_letters.png" width="100" height="50" alt="Trader Joes" align="right" /> </td>
+<td width="20%"> </td>
+</tr>
+</table>
+
+
+<form action="" id="nutrition" onsubmit="return false;">
+        <div> <!-- 2 -->
+            <div class="cont_order"> <!-- 3 -->
+               <fieldset>
+                <legend> <font color="#000000" face="candara" size="4.5"> Please, select a product in order to display its nutritional facts. </font> </legend>
+                
+<br/>
+<br/>
+                <label> <font color="#000000" face="candara" size="4.5"> Product </font> </label>
+
+<br/>
+<br/>
+
+<font size="4" face="candara">          
+                <select id="product" name='product' onchange="getTotal()">   <!-- used before product instead of calories -->
+<option value="None"> Select Product </option>
+<option value="(Barry Farm Foods) Mixed Nuts, Fancy"> (Barry Farm Foods) Mixed Nuts, Fancy </option>
+<option value="(Blue Dragon) Coconut - Milk, Light"> (Blue Dragon) Coconut - Milk, Light </option>
+<option value="(Compliments) Cooking Sauce, Thai Yellow Curry"> (Compliments) Cooking Sauce, Thai Yellow Curry </option>
+<option value="(Dennys) Marinara Sauce"> (Dennys) Marinara Sauce </option>
+<option value="(Wise Foods) Lite Butter Flavored Popcorn - Popcorn - Flavored"> (Wise Foods) Lite Butter Flavored Popcorn - Popcorn - Flavored </option>
+<option value="1% Lowfat Milk"> 1% Lowfat Milk </option>
+<option value="72% Dark Chocolate"> 72% Dark Chocolate </option>
+<option value="99% Fat Free Bean And Rice Burrito"> 99% Fat Free Bean And Rice Burrito </option>
+<option value="100 Calorie 70% Dark Chocolate Bars"> 100 Calorie 70% Dark Chocolate Bars </option>
+<option value="100 Calorie Pack - Oatmeal Choclate Chip"> 100 Calorie Pack - Oatmeal Choclate Chip </option>
+<option value="100% Whole Grain Fiber Bread (whole Wheat)"> 100% Whole Grain Fiber Bread (whole Wheat) </option>
+<option value="100% Whole Wheat Pizza Dough"> 100% Whole Wheat Pizza Dough </option>
+<option value="Aioli Garlic Mustard Sauce"> Aioli Garlic Mustard Sauce </option>
+<option value="Almond Butter"> Almond Butter </option>
+<option value="Almond Butter Creamy Unsalted"> Almond Butter Creamy Unsalted </option>
+<option value="Almond Butter, Raw Creamy, Unsalted"> Almond Butter, Raw Creamy, Unsalted </option>
+<option value="Almost Whole Wheat Pizza Dough"> Almost Whole Wheat Pizza Dough </option>
+<option value="Apple Cranberry Bran Muffins"> Apple Cranberry Bran Muffins </option>
+<option value="Apricot Fiberful"> Apricot Fiberful </option>
+<option value="Artichoke Hearts"> Artichoke Hearts </option>
+<option value="Artichoke Hearts (canned)"> Artichoke Hearts (canned) </option>
+<option value="Artisan Bread Panini Rustic Rolls"> Artisan Bread Panini Rustic Rolls </option>
+<option value="Arugula Salad"> Arugula Salad </option>
+<option value="Asparagus Risotto"> Asparagus Risotto </option>
+<option value="Asparagus Spears - Frozen"> Asparagus Spears - Frozen </option>
+<option value="Avocado's Number Guacamole"> Avocado's Number Guacamole </option>
+<option value="Baby Lettuce Mix"> Baby Lettuce Mix </option>
+<option value="Baby Spinach"> Baby Spinach </option>
+<option value="Baked Blue Corn Tortilla Chips Salted"> Baked Blue Corn Tortilla Chips Salted </option>
+<option value="Baklava"> Baklava </option>
+<option value="Balsamic Vinagrette"> Balsamic Vinagrette </option>
+<option value="Balsamic Vinegar"> Balsamic Vinegar </option>
+<option value="Balsamic Vinegrette Dressing"> Balsamic Vinegrette Dressing </option>
+<option value="Banana Waffles"> Banana Waffles </option>
+<option value="Bbq Chicken Pizza"> Bbq Chicken Pizza </option>
+<option value="Bbq Chicken Salad"> Bbq Chicken Salad </option>
+<option value="Bbq Shredded Pork"> Bbq Shredded Pork </option>
+<option value="Beef Jerky"> Beef Jerky </option>
+<option value="Berry Medley"> Berry Medley </option>
+<option value="Biryani"> Biryani </option>
+<option value="Bite Size Everything Crackers"> Bite Size Everything Crackers </option>
+<option value="Black Bean and Corn Enchilada"> Black Bean and Corn Enchilada </option>
+<option value="Black Beans"> Black Beans </option>
+<option value="Black Forest Ham"> Black Forest Ham </option>
+<option value="Blackberries"> Blackberries </option>
+<option value="Blueberries, Frozen"> Blueberries, Frozen </option>
+<option value="British Style Crumpets"> British Style Crumpets </option>
+<option value="Broccoli and Cheddar Quiche"> Broccoli and Cheddar Quiche </option>
+<option value="Broccoli Florets"> Broccoli Florets </option>
+<option value="Brown Basmati Rice"> Brown Basmati Rice </option>
+<option value="Brown Jasmine Rice"> Brown Jasmine Rice </option>
+<option value="Brown Rice"> Brown Rice </option>
+<option value="Brown Rice Medley"> Brown Rice Medley </option>
+<option value="Buccaneer Joe's Unburied Treasure Cheese Puffs"> Buccaneer Joe's Unburied Treasure Cheese Puffs </option>
+<option value="Butternut Squash Soup"> Butternut Squash Soup </option>
+<option value="California Walnuts Halves & Pieces"> California Walnuts Halves & Pieces </option>
+<option value="Candied Pecans"> Candied Pecans </option>
+<option value="Candied Walnuts"> Candied Walnuts </option>
+<option value="Candy Cane Joe-joe's cookies"> Candy Cane Joe-joe's cookies </option>
+<option value="Carne Asada"> Carne Asada </option>
+<option value="Carrot Ginger Soup"> Carrot Ginger Soup </option>
+<option value="Carrot Juice"> Carrot Juice </option>
+<option value="Cashew Butter"> Cashew Butter </option>
+<option value="Cats Cookies"> Cats Cookies </option>
+<option value="Ceasar Salad (Large)"> Ceasar Salad (Large) </option>
+<option value="Champagne Pear Vinaigrette With Gorgonzola"> Champagne Pear Vinaigrette With Gorgonzola </option>
+<option value="Chedder Cheese"> Chedder Cheese </option>
+<option value="Cheese And Green Chile Tamales"> Cheese And Green Chile Tamales </option>
+<option value="Chicken Burritos"> Chicken Burritos </option>
+<option value="Chicken Fried Rice"> Chicken Fried Rice </option>
+<option value="Chicken Shu Mai"> Chicken Shu Mai </option>
+<option value="Chicken Vindaloo"> Chicken Vindaloo </option>
+<option value="Chile Lime Chicken Burger"> Chile Lime Chicken Burger </option>
+<option value="Chile Lime Chicken Burgers"> Chile Lime Chicken Burgers </option>
+<option value="Chocolate Chip Cookie"> Chocolate Chip Cookie </option>
+<option value="Chocolate Covered Mini Pretzels"> Chocolate Covered Mini Pretzels </option>
+<option value="Chocolate Whey Protein Powder"> Chocolate Whey Protein Powder </option>
+<option value="Cilantro Salad Dressing Reduced Fat"> Cilantro Salad Dressing Reduced Fat </option>
+<option value="Cinnamon Almonds"> Cinnamon Almonds </option>
+<option value="Cioppino Seafood Stew"> Cioppino Seafood Stew </option>
+<option value="Clementines"> Clementines </option>
+<option value="Clover Honey"> Clover Honey </option>
+<option value="Complete Body Cleanse"> Complete Body Cleanse </option>
+<option value="Complete Protein Bread California Style"> Complete Protein Bread California Style </option>
+<option value="Cranberry Trail Mix"> Cranberry Trail Mix </option>
+<option value="Cranberry, Walnut & Gorgonzola Salad Dressing"> Cranberry, Walnut & Gorgonzola Salad Dressing </option>
+<option value="Creamy Salted Peanut Butter"> Creamy Salted Peanut Butter </option>
+<option value="Creamy Unsalted Peanut Butter"> Creamy Unsalted Peanut Butter </option>
+<option value="Crunchy Salted Peanut Butter"> Crunchy Salted Peanut Butter </option>
+<option value="Crunchy Unsalted Peanut Butter"> Crunchy Unsalted Peanut Butter </option>
+<option value="Crystallized Ginger Slices"> Crystallized Ginger Slices </option>
+<option value="Cuban Style Black Beans"> Cuban Style Black Beans </option>
+<option value="Curry Simmer Sauce"> Curry Simmer Sauce </option>
+<option value="Dark Chocolate"> Dark Chocolate </option>
+<option value="Dark Chocolate Almonds"> Dark Chocolate Almonds </option>
+<option value="Dark Chocolate Covered Raisins"> Dark Chocolate Covered Raisins </option>
+<option value="Dark Chocolate Edamame"> Dark Chocolate Edamame </option>
+<option value="Dolmas"> Dolmas </option>
+<option value="dried apricots"> dried apricots </option>
+<option value="Dried Cranberries"> Dried Cranberries </option>
+<option value="Dried Pitted Tart Montmorency Cherries"> Dried Pitted Tart Montmorency Cherries </option>
+<option value="Dry Roasted & Unsalted Almonds"> Dry Roasted & Unsalted Almonds </option>
+<option value="Edamame"> Edamame </option>
+<option value="Edamame And Seaweed Salad"> Edamame And Seaweed Salad </option>
+<option value="Egg White Salad With Chives"> Egg White Salad With Chives </option>
+<option value="Eggplant Cutlets"> Eggplant Cutlets </option>
+<option value="Eggplant Hummus"> Eggplant Hummus </option>
+<option value="Eggplant Parmesan"> Eggplant Parmesan </option>
+<option value="English Muffin British Whole Wheat"> English Muffin British Whole Wheat </option>
+<option value="Everything Pretzel Thins"> Everything Pretzel Thins </option>
+<option value="Extra Fine French Green Beans"> Extra Fine French Green Beans </option>
+<option value="Extra Virgin Olive Oil"> Extra Virgin Olive Oil </option>
+<option value="Fat Free Balsamic Vinagrette"> Fat Free Balsamic Vinagrette </option>
+<option value="Fat Free Cottage Cheese"> Fat Free Cottage Cheese </option>
+<option value="Fat Free Crumbled Feta"> Fat Free Crumbled Feta </option>
+<option value="Fat Free English Muffins"> Fat Free English Muffins </option>
+<option value="Fat Free Milk"> Fat Free Milk </option>
+<option value="Fingerling Potatoes"> Fingerling Potatoes </option>
+<option value="Fire Roasted Red Peppers"> Fire Roasted Red Peppers </option>
+<option value="Fire Roasted Vegetables W/ Balsamic Butter Sauce"> Fire Roasted Vegetables W/ Balsamic Butter Sauce </option>
+<option value="Firm Tofu"> Firm Tofu </option>
+<option value="Flax Seed With Blueberries"> Flax Seed With Blueberries </option>
+<option value="Flourless Chocolate Cake"> Flourless Chocolate Cake </option>
+<option value="Flourless Nut Bread"> Flourless Nut Bread </option>
+<option value="French Onion Soup"> French Onion Soup </option>
+<option value="Fresh Blueberry Preserves"> Fresh Blueberry Preserves </option>
+<option value="Frozen Artichoke Hearts"> Frozen Artichoke Hearts </option>
+<option value="Frozen Chocolate Covered Banana"> Frozen Chocolate Covered Banana </option>
+<option value="Frozen Chopped Spinach"> Frozen Chopped Spinach </option>
+<option value="Frozen Mango Chunks"> Frozen Mango Chunks </option>
+<option value="Frozen Organic Strawberries"> Frozen Organic Strawberries </option>
+<option value="Garbanzo Beans"> Garbanzo Beans </option>
+<option value="Gnocchi"> Gnocchi </option>
+<option value="Goat Cheese Pizza"> Goat Cheese Pizza </option>
+<option value="Goddess Dressing"> Goddess Dressing </option>
+<option value="Golden Roasted Flaxseed"> Golden Roasted Flaxseed </option>
+<option value="Granola And The 3 Berries"> Granola And The 3 Berries </option>
+<option value="Grapefruit Juice"> Grapefruit Juice </option>
+<option value="Grapeseed Oil"> Grapeseed Oil </option>
+<option value="Grassfed Angus Beef Ground Beef"> Grassfed Angus Beef Ground Beef </option>
+<option value="Greek Salad (no Dressing)"> Greek Salad (no Dressing) </option>
+<option value="Greek Style 0% Nonfat Plain Yogurt"> Greek Style 0% Nonfat Plain Yogurt </option>
+<option value="Greek Style Nonfat Plain Yoghurt"> Greek Style Nonfat Plain Yoghurt </option>
+<option value="Greek Style Nonfat Yogurt Honey"> Greek Style Nonfat Yogurt Honey </option>
+<option value="Greek Style Yogurt Pomegranate"> Greek Style Yogurt Pomegranate </option>
+<option value="Greek Yogurt"> Greek Yogurt </option>
+<option value="Greek Yogurt, Fat Free 0%"> Greek Yogurt, Fat Free 0% </option>
+<option value="Green Leaf Lettuce"> Green Leaf Lettuce </option>
+<option value="Green Tea (bag)"> Green Tea (bag) </option>
+<option value="Grilled Vegetable Wrap"> Grilled Vegetable Wrap </option>
+<option value="Ground Buffalo Steak Burgers"> Ground Buffalo Steak Burgers </option>
+<option value="Guacamole"> Guacamole </option>
+<option value="Hand Crafted Chicken Enchiladas"> Hand Crafted Chicken Enchiladas </option>
+<option value="Harvest Grains Blend"> Harvest Grains Blend </option>
+<option value="Harvest Hodgepodge"> Harvest Hodgepodge </option>
+<option value="Harvest Whole Wheat Bread"> Harvest Whole Wheat Bread </option>
+<option value="Havarti Cheese (sliced)"> Havarti Cheese (sliced) </option>
+<option value="Heart Healthy Whole Grain Cranberry Oatmeal"> Heart Healthy Whole Grain Cranberry Oatmeal </option>
+<option value="Herb Foccacia Bread"> Herb Foccacia Bread </option>
+<option value="Herb Salad Mix"> Herb Salad Mix </option>
+<option value="Honey Nut O's"> Honey Nut O's </option>
+<option value="Honey Whole Wheat Pretzel Sticks"> Honey Whole Wheat Pretzel Sticks </option>
+<option value="Hummus Dip"> Hummus Dip </option>
+<option value="Hummus, Garlic"> Hummus, Garlic </option>
+<option value="Indian Fare Palak Paneer"> Indian Fare Palak Paneer </option>
+<option value="Instant Miso Soup"> Instant Miso Soup </option>
+<option value="Instant Oatmeal"> Instant Oatmeal </option>
+<option value="Instant Oatmeal - Heart Healthy Whole Grain, Blueberry"> Instant Oatmeal - Heart Healthy Whole Grain, Blueberry </option>
+<option value="Jasmine Rice"> Jasmine Rice </option>
+<option value="Jasmine Rice (air Tight, Fully Cooked)"> Jasmine Rice (air Tight, Fully Cooked) </option>
+<option value="Joe's O's"> Joe's O's </option>
+<option value="Joe-Joe's Chocolate Sandwich Creme Cookies"> Joe-Joe's Chocolate Sandwich Creme Cookies </option>
+<option value="Just A Handful Of Raw Almonds"> Just A Handful Of Raw Almonds </option>
+<option value="Just Almond Meal"> Just Almond Meal </option>
+<option value="Just Mango Slices"> Just Mango Slices </option>
+<option value="Lacey's Cookies"> Lacey's Cookies </option>
+<option value="Lavash Bread"> Lavash Bread </option>
+<option value="Lentil Vegetable Soup (Organic)"> Lentil Vegetable Soup (Organic) </option>
+<option value="Light Cream Cheese"> Light Cream Cheese </option>
+<option value="Light Feta Cheese"> Light Feta Cheese </option>
+<option value="Light Shredded Three Cheese Blend"> Light Shredded Three Cheese Blend </option>
+<option value="Light Sour Cream"> Light Sour Cream </option>
+<option value="light string cheese"> light string cheese </option>
+<option value="Light Whipped Cream Cheese"> Light Whipped Cream Cheese </option>
+<option value="Lite Havarti Cheese"> Lite Havarti Cheese </option>
+<option value="Lite Shredded 3 Cheese Blend"> Lite Shredded 3 Cheese Blend </option>
+<option value="Lobster Ravioli"> Lobster Ravioli </option>
+<option value="Low Calorie Light Wheat Bread"> Low Calorie Light Wheat Bread </option>
+<option value="Low Fat French Toast"> Low Fat French Toast </option>
+<option value="Lowfat Cottage Cheese"> Lowfat Cottage Cheese </option>
+<option value="Lowfat Granola With Almonds"> Lowfat Granola With Almonds </option>
+<option value="Lowfat Parmesan Ranch Dressing"> Lowfat Parmesan Ranch Dressing </option>
+<option value="Lowfat Plain Kefir"> Lowfat Plain Kefir </option>
+<option value="Mahi Mahi Fillets, Seasoned"> Mahi Mahi Fillets, Seasoned </option>
+<option value="Mango Chicken Sausage"> Mango Chicken Sausage </option>
+<option value="Maple Pecan Granola"> Maple Pecan Granola </option>
+<option value="Masala Simmer Sauce"> Masala Simmer Sauce </option>
+<option value="Meatless Meatballs"> Meatless Meatballs </option>
+<option value="Mediterranean Hummus"> Mediterranean Hummus </option>
+<option value="Melange A Trois Red, Yellow, Green Bell Pepper Strips"> Melange A Trois Red, Yellow, Green Bell Pepper Strips </option>
+<option value="Middle Eastern Flatbread"> Middle Eastern Flatbread </option>
+<option value="Mild Salsa"> Mild Salsa </option>
+<option value="Mini Chicken Tacos"> Mini Chicken Tacos </option>
+<option value="Mini Pearl Grape Tomatoes"> Mini Pearl Grape Tomatoes </option>
+<option value="Mixed Greens"> Mixed Greens </option>
+<option value="Multigrain Baking \u0026 Pancake Mix"> Multigrain Baking \u0026 Pancake Mix </option>
+<option value="Multigrain Crackers"> Multigrain Crackers </option>
+<option value="Multigrain Pilaf"> Multigrain Pilaf </option>
+<option value="Multigrain Tortilla Chips"> Multigrain Tortilla Chips </option>
+<option value="Mushroom Risotto"> Mushroom Risotto </option>
+<option value="Naan Bread"> Naan Bread </option>
+<option value="Natural Peanut Butter"> Natural Peanut Butter </option>
+<option value="Natural Toasted Oat Bran"> Natural Toasted Oat Bran </option>
+<option value="Nonfat Milk"> Nonfat Milk </option>
+<option value="O's"> O's </option>
+<option value="Oatmeal Complete"> Oatmeal Complete </option>
+<option value="Oatmeal Cranberry Dunkers"> Oatmeal Cranberry Dunkers </option>
+<option value="Oats & Flax Instant Oatmeal"> Oats & Flax Instant Oatmeal </option>
+<option value="Olive Tapenade Spread"> Olive Tapenade Spread </option>
+<option value="Omega Trail Mix"> Omega Trail Mix </option>
+<option value="Organic Animal Crackers"> Organic Animal Crackers </option>
+<option value="Organic Baby Spinach"> Organic Baby Spinach </option>
+<option value="Organic Baked Tofu (Teriyaki Flavor)"> Organic Baked Tofu (Teriyaki Flavor) </option>
+<option value="Organic Black Bean Soup"> Organic Black Bean Soup </option>
+<option value="Organic Black Beans"> Organic Black Beans </option>
+<option value="Organic Blue Agave Sweetener"> Organic Blue Agave Sweetener </option>
+<option value="Organic Blue Corn Tortilla Chips"> Organic Blue Corn Tortilla Chips </option>
+<option value="Organic Broccoli Slaw"> Organic Broccoli Slaw </option>
+<option value="Organic Brown Rice"> Organic Brown Rice </option>
+<option value="Organic Cooked Brown Rice (frozen)"> Organic Cooked Brown Rice (frozen) </option>
+<option value="Organic Creamy Peanut Butter"> Organic Creamy Peanut Butter </option>
+<option value="Organic Creamy Tomato Soup"> Organic Creamy Tomato Soup </option>
+<option value="Organic Creamy Tomato Soup Low Sodium"> Organic Creamy Tomato Soup Low Sodium </option>
+<option value="Organic Crunchy Peanut Butter"> Organic Crunchy Peanut Butter </option>
+<option value="Organic Dried Pineapple Rings"> Organic Dried Pineapple Rings </option>
+<option value="Organic High Fiber O's"> Organic High Fiber O's </option>
+<option value="Organic Hummus"> Organic Hummus </option>
+<option value="Organic Ketchup"> Organic Ketchup </option>
+<option value="Organic Lowfat Yogurt Vanilla"> Organic Lowfat Yogurt Vanilla </option>
+<option value="Organic Mango Acai Berry"> Organic Mango Acai Berry </option>
+<option value="Organic Maple Syrup Grade B"> Organic Maple Syrup Grade B </option>
+<option value="Organic Mayonnaise"> Organic Mayonnaise </option>
+<option value="Organic Pasteurized Unfiltered Apple Cider Vinegar"> Organic Pasteurized Unfiltered Apple Cider Vinegar </option>
+<option value="organic peeled carrots"> organic peeled carrots </option>
+<option value="Organic Polenta"> Organic Polenta </option>
+<option value="Organic Raw Pumpkin Seeds"> Organic Raw Pumpkin Seeds </option>
+<option value="Organic Reduced Sugar Strawberry Preserves"> Organic Reduced Sugar Strawberry Preserves </option>
+<option value="Organic Spelt Bread"> Organic Spelt Bread </option>
+<option value="Organic Split Pea Soup (vegan)"> Organic Split Pea Soup (vegan) </option>
+<option value="Organic Strawberries"> Organic Strawberries </option>
+<option value="Organic Sugar - Evaporated Cane Juice"> Organic Sugar - Evaporated Cane Juice </option>
+<option value="Organic Tomato & Roasted Red Pepper Soup"> Organic Tomato & Roasted Red Pepper Soup </option>
+<option value="Organic Tomato & Roasted Red Pepper Soup Low Sodium"> Organic Tomato & Roasted Red Pepper Soup Low Sodium </option>
+<option value="Organic Udon Noodles"> Organic Udon Noodles </option>
+<option value="Organic Unsweetened Soy Milk"> Organic Unsweetened Soy Milk </option>
+<option value="Organic Vodka Sauce"> Organic Vodka Sauce </option>
+<option value="Organic White Corn Tortilla Chips"> Organic White Corn Tortilla Chips </option>
+<option value="Organic Wild Blueberries"> Organic Wild Blueberries </option>
+<option value="Oriental Rice Crackers"> Oriental Rice Crackers </option>
+<option value="Oven Roasted Turkey Breast"> Oven Roasted Turkey Breast </option>
+<option value="Pad Thai"> Pad Thai </option>
+<option value="Panko Breaded Tilapia Fillets"> Panko Breaded Tilapia Fillets </option>
+<option value="Peanut Butter"> Peanut Butter </option>
+<option value="Peanut Butter - Creamy & Salted 100% All Natural"> Peanut Butter - Creamy & Salted 100% All Natural </option>
+<option value="Peanut Butter Filled Pretzels"> Peanut Butter Filled Pretzels </option>
+<option value="Peanut Butter Granola Bar"> Peanut Butter Granola Bar </option>
+<option value="Penne Arrabbiata"> Penne Arrabbiata </option>
+<option value="Pepitas"> Pepitas </option>
+<option value="Persian Cucumbers"> Persian Cucumbers </option>
+<option value="Peruvian Style Chimichurri Rice With Vegetables"> Peruvian Style Chimichurri Rice With Vegetables </option>
+<option value="Pesto"> Pesto </option>
+<option value="Pesto Pizza"> Pesto Pizza </option>
+<option value="Petite Peas (frozen)"> Petite Peas (frozen) </option>
+<option value="Pita Bread"> Pita Bread </option>
+<option value="Pita Chips With Sea Salt"> Pita Chips With Sea Salt </option>
+<option value="Pita Pockets - Whole Wheat"> Pita Pockets - Whole Wheat </option>
+<option value="Pitted Kalamata Olives"> Pitted Kalamata Olives </option>
+<option value="Pitted Prunes"> Pitted Prunes </option>
+<option value="Pizza Margherita"> Pizza Margherita </option>
+<option value="Pizza Olympiad"> Pizza Olympiad </option>
+<option value="Pizza Sauce"> Pizza Sauce </option>
+<option value="Pollo Asado"> Pollo Asado </option>
+<option value="Pork Gyoza Potstickers"> Pork Gyoza Potstickers </option>
+<option value="Portabella Mushroom Ravioli"> Portabella Mushroom Ravioli </option>
+<option value="Potato Medley"> Potato Medley </option>
+<option value="Potato Pancakes"> Potato Pancakes </option>
+<option value="Pound Plus 72% Dark Chocolate"> Pound Plus 72% Dark Chocolate </option>
+<option value="Premium Milk & Dark Chocolate Covered Almonds"> Premium Milk & Dark Chocolate Covered Almonds </option>
+<option value="Pretzel Slims"> Pretzel Slims </option>
+<option value="Prig Khing Green Beans"> Prig Khing Green Beans </option>
+<option value="Pumpkin Butter"> Pumpkin Butter </option>
+<option value="Punjab Choley (Indian Fare)"> Punjab Choley (Indian Fare) </option>
+<option value="Quick Scrambled Egg Whites (microwaveable)"> Quick Scrambled Egg Whites (microwaveable) </option>
+<option value="Quinoa"> Quinoa </option>
+<option value="Raisin Bran"> Raisin Bran </option>
+<option value="Raw Almonds"> Raw Almonds </option>
+<option value="Raw Pecan Halves"> Raw Pecan Halves </option>
+<option value="Raw Sliced Almonds"> Raw Sliced Almonds </option>
+<option value="Raw Sunflower Seeds (No Shell)"> Raw Sunflower Seeds (No Shell) </option>
+<option value="Raw Walnuts - Organic Halves \u0026 Pieces"> Raw Walnuts - Organic Halves \u0026 Pieces </option>
+<option value="Ready To Bake Pizza Dough"> Ready To Bake Pizza Dough </option>
+<option value="Red Pepper Spread"> Red Pepper Spread </option>
+<option value="Reduced Fat Greek Salad"> Reduced Fat Greek Salad </option>
+<option value="Reduced Fat Mayonnaise"> Reduced Fat Mayonnaise </option>
+<option value="Reduced Fat Southwest Salad"> Reduced Fat Southwest Salad </option>
+<option value="Rice Bowl With Chicken, Vegetables And Teriyaki Sauce"> Rice Bowl With Chicken, Vegetables And Teriyaki Sauce </option>
+<option value="Rice Cake-lightly Salted"> Rice Cake-lightly Salted </option>
+<option value="Roasted Corn"> Roasted Corn </option>
+<option value="Roasted Garlic Hummus"> Roasted Garlic Hummus </option>
+<option value="Roasted Plantain Chips"> Roasted Plantain Chips </option>
+<option value="Roasted Red Pepper Hummus"> Roasted Red Pepper Hummus </option>
+<option value="Roasted Vegetable Pizza"> Roasted Vegetable Pizza </option>
+<option value="Romaine"> Romaine </option>
+<option value="Salmon Burger"> Salmon Burger </option>
+<option value="Salsa Verde"> Salsa Verde </option>
+<option value="Savory Thin Mini Crackers"> Savory Thin Mini Crackers </option>
+<option value="Sesame Sticks"> Sesame Sticks </option>
+<option value="Shelled Edamame"> Shelled Edamame </option>
+<option value="Shredded Carrots"> Shredded Carrots </option>
+<option value="Shredded Mozzarella Cheese"> Shredded Mozzarella Cheese </option>
+<option value="Shrimp, Large Cooked"> Shrimp, Large Cooked </option>
+<option value="Sliced Apples"> Sliced Apples </option>
+<option value="Sliced Black Olives"> Sliced Black Olives </option>
+<option value="Sliced Lite Cheddar Cheese"> Sliced Lite Cheddar Cheese </option>
+<option value="sliced soy cheese alternative - cheddar flavor"> sliced soy cheese alternative - cheddar flavor </option>
+<option value="Sliced Turkey Breast"> Sliced Turkey Breast </option>
+<option value="Slivered Almonds ( Raw )"> Slivered Almonds ( Raw ) </option>
+<option value="Snow Peas"> Snow Peas </option>
+<option value="Soft Whole Wheat Bread"> Soft Whole Wheat Bread </option>
+<option value="Soy & Flaxseed Tortilla Chips"> Soy & Flaxseed Tortilla Chips </option>
+<option value="Soy Crisps"> Soy Crisps </option>
+<option value="Soy Ginger Salad Dressing"> Soy Ginger Salad Dressing </option>
+<option value="Soy Milk Creamer"> Soy Milk Creamer </option>
+<option value="Soy Nuggets"> Soy Nuggets </option>
+<option value="Soy Protein Powder"> Soy Protein Powder </option>
+<option value="Soyaki Sauce"> Soyaki Sauce </option>
+<option value="Spanakopita"> Spanakopita </option>
+<option value="Spicy Hummus Dip"> Spicy Hummus Dip </option>
+<option value="Spicy Spinach Pizza, Thin Crust"> Spicy Spinach Pizza, Thin Crust </option>
+<option value="Spicy, Smoky, Peach Salsa"> Spicy, Smoky, Peach Salsa </option>
+<option value="Spinach \u0026 Artichoke Dip"> Spinach \u0026 Artichoke Dip </option>
+<option value="Spinach Lasagna"> Spinach Lasagna </option>
+<option value="Spinach Pie"> Spinach Pie </option>
+<option value="Spinach Pizza"> Spinach Pizza </option>
+<option value="Spring Mix"> Spring Mix </option>
+<option value="Sprouted Flourless Whole Wheat Berry Bread"> Sprouted Flourless Whole Wheat Berry Bread </option>
+<option value="Sprouted Wheat Berry Bread"> Sprouted Wheat Berry Bread </option>
+<option value="Sprouted Wheat Bread"> Sprouted Wheat Bread </option>
+<option value="Steamed Lentils"> Steamed Lentils </option>
+<option value="Steelcut Oatmeal"> Steelcut Oatmeal </option>
+<option value="Stir Fried Vegetable Eggrolls"> Stir Fried Vegetable Eggrolls </option>
+<option value="Stir Fry Vegetables"> Stir Fry Vegetables </option>
+<option value="Strawberries"> Strawberries </option>
+<option value="String Cheese"> String Cheese </option>
+<option value="Stroopwafel Caramel Wafers"> Stroopwafel Caramel Wafers </option>
+<option value="Sugar Snap Peas"> Sugar Snap Peas </option>
+<option value="Sunflower Seed Butter"> Sunflower Seed Butter </option>
+<option value="Sweet Apple Chicken Sausage"> Sweet Apple Chicken Sausage </option>
+<option value="Sweet Potato Fries"> Sweet Potato Fries </option>
+<option value="Tabouli Salad"> Tabouli Salad </option>
+<option value="Tandoori Naan"> Tandoori Naan </option>
+<option value="Tempting Trail Mix"> Tempting Trail Mix </option>
+<option value="Tempura Shrimp with Soy Dipping Sauce"> Tempura Shrimp with Soy Dipping Sauce </option>
+<option value="Tempura Vegetables"> Tempura Vegetables </option>
+<option value="Thai Peanut Sauce"> Thai Peanut Sauce </option>
+<option value="Thai Red Curry Sauce"> Thai Red Curry Sauce </option>
+<option value="Thompson Seedless Raisins"> Thompson Seedless Raisins </option>
+<option value="Tomato & Basil Hummus"> Tomato & Basil Hummus </option>
+<option value="Trader Darwin's Very Green Dietary Supplement"> Trader Darwin's Very Green Dietary Supplement </option>
+<option value="Trader Joe's Garlic Fries"> Trader Joe's Garlic Fries </option>
+<option value="Trader Joe's Pizza 4 Formaggi"> Trader Joe's Pizza 4 Formaggi </option>
+<option value="Turkey Bacon"> Turkey Bacon </option>
+<option value="Turkey Burger"> Turkey Burger </option>
+<option value="Turkey Burger Patties"> Turkey Burger Patties </option>
+<option value="Turkey Meatballs"> Turkey Meatballs </option>
+<option value="Tzatziki"> Tzatziki </option>
+<option value="Uncooked Jumbo Shrimp"> Uncooked Jumbo Shrimp </option>
+<option value="Uncrystallized Candied Ginger"> Uncrystallized Candied Ginger </option>
+<option value="Uncured Turkey Bacon"> Uncured Turkey Bacon </option>
+<option value="Unsulfered And Unsweetened Dried Mango Slices"> Unsulfered And Unsweetened Dried Mango Slices </option>
+<option value="Vanilla Almond Crunch Chewy Granola Bars"> Vanilla Almond Crunch Chewy Granola Bars </option>
+<option value="Vanilla Soy Milk"> Vanilla Soy Milk </option>
+<option value="Vegetable Fried Rice"> Vegetable Fried Rice </option>
+<option value="Vegetable Gyoza Potstickers"> Vegetable Gyoza Potstickers </option>
+<option value="Vegetable Masala Burger"> Vegetable Masala Burger </option>
+<option value="Vegetarian Chili"> Vegetarian Chili </option>
+<option value="Vegetarian Sushi"> Vegetarian Sushi </option>
+<option value="Veggie & Flaxseed Tortilla Chips"> Veggie & Flaxseed Tortilla Chips </option>
+<option value="Veggie Chips"> Veggie Chips </option>
+<option value="Veggie Chips Potato Snacks"> Veggie Chips Potato Snacks </option>
+<option value="Veggie Wrap With Hummus"> Veggie Wrap With Hummus </option>
+<option value="Very Chocolate Mini Meringues"> Very Chocolate Mini Meringues </option>
+<option value="Very Green Juice Blend"> Very Green Juice Blend </option>
+<option value="Warm Roasted Vegetable Salad"> Warm Roasted Vegetable Salad </option>
+<option value="Wasabi Peas"> Wasabi Peas </option>
+<option value="White Basmati Rice"> White Basmati Rice </option>
+<option value="Whole Grain Hard Pretzel Sticks"> Whole Grain Hard Pretzel Sticks </option>
+<option value="Whole Raw Cashews"> Whole Raw Cashews </option>
+<option value="Whole Wheat Bagel"> Whole Wheat Bagel </option>
+<option value="Whole Wheat Couscous"> Whole Wheat Couscous </option>
+<option value="Whole Wheat Hamburger Bun"> Whole Wheat Hamburger Bun </option>
+<option value="Whole Wheat Mini Pita's"> Whole Wheat Mini Pita's </option>
+<option value="Whole Wheat Pita Bread"> Whole Wheat Pita Bread </option>
+<option value="Whole Wheat Tandoori Naan"> Whole Wheat Tandoori Naan </option>
+<option value="Whole Wheat Tortilla"> Whole Wheat Tortilla </option>
+<option value="Whole Wheat Tortillas"> Whole Wheat Tortillas </option>
+<option value="Wild Rice"> Wild Rice </option>
+<option value="Zen Bakery Blueberry Fiber Cake"> Zen Bakery Blueberry Fiber Cake </option>
+
+                </select>
+                <br/>
+
+<div id="facts"></div>                
+                </fieldset>
+            </div>
+            
+        	<div class="cont_details"></div>
+            <input type='submit' id='submit' value='Submit' onclick="doVisual()" />  <!-- Onchange used instead of onclick, because onchange is used specifically for the drop down box. onclick is used for radio buttons and check boxes -->
+        </div> 
+       </form>
+
+<script type="text/javascript" src="factsLabel.js"></script>
+
+</font> 
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+</td>
+</tr>
+</table>
+
+
+<table width="40%" bgcolor="efefad" align="right">  
+<tr>
+<td> 
+<br/>
+<h2 style="color:#000000;margin-bottom:0;text-align:center;" face="candara"> STEP 3: </h2>
+<p> <font color="#000000" face="candara" size="4.5"> Graphic visualization of the data from the drop-down list. Click the submit button on Step 2 to see the data displayed in a graph. </font> </p>
+<br/>
+<p> <font color="#000000" face="candara" size="4"> Color code: </font> </p>
+<ul> 
+<li> <font color="#000000" face="candara" size="4"> Fats: Red <font color="#ff0000" face="candara" size="4"> * </font> </font> </li> 
+<li> <font color="#000000" face="candara" size="4"> Saturated Fats: Green <font color="#94d639" face="candara" size="4"> * </font> </font> </li> 
+<li> <font color="#000000" face="candara" size="4"> Carbohydrates: Dark Blue <font color="#082984" face="candara" size="4"> * </font> </font> </li> 
+<li> <font color="#000000" face="candara" size="4"> Dietary Fiber: Light White <font color="#31b5d6" face="candara" size="4"> * </font> </font> </li> 
+<li> <font color="#000000" face="candara" size="4"> Sodium: Pink <font color="#ff9473" face="candara" size="4"> * </font> </font> </li>
+<li> <font color="#000000" face="candara" size="4"> Proteins: Yellow <font color="#ffff10" face="candara" size="4"> * </font> </font> </li>
+</ul>
+
+
+
+<div id="canvas" style="overflow:hidden;background-color:#ffffff;height:500px;width:600px;float:left;"><!-- 3.4 -->
+
+
+<script type="text/javascript" src="raphael.js"></script>
+<script type="text/javascript" src="visualization.js"></script>
+
+	
+</div> <!-- 3.4 -->
+
+</td>
+</tr>
+</table>  <!--  Ends footer -->
+
+
+
+<br/>
+
+<!-- Adding footer --> 
+<table width="90%" align="center">
+<caption align="bottom"> <font face="candara" size="+1" color="000000"> 
+<h4> Group C: </h4>
+<ul> 
+<li> Caylan Lewis </li> 
+<li> Daniela Martignani </li> 
+<li> Andrew Peckham </li> 
+<li> Stefan Reich </li> 
+<li> Nicholas Swan </li>
+<p> Oakland University - Winter 2012 </p>
+</ul>
+<br />   
+</font> </caption> <!-- code for caption, not part of the tables-->
+<tr>
+<td> </td>
+</tr>
+</table>  <!--  Ends footer -->
+
+<br /> 
+
+
+<p align="center"> <a href="#top"> <font size="4" face="candara"> To top </font> </a> </p> <!-- link that goes to top of the page -->
+
+
+</body>
+</html>
+
+
